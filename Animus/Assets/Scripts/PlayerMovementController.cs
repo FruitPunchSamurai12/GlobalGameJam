@@ -30,7 +30,7 @@ public class PlayerMovementController : MonoBehaviour,IMove
     void FixedUpdate()
     {
         float horizontal = Input.GetAxis("Horizontal");
-        Speed = horizontal;
+        Speed = horizontal;//this is for the animation
 
         Vector3 movement = new Vector3(horizontal, 0);
 
