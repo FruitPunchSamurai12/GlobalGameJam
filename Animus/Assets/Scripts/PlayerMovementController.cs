@@ -15,27 +15,20 @@ public class PlayerMovementController : MonoBehaviour,IMove
     {
         rb2d = GetComponent<Rigidbody2D>();
         characterGrounding = GetComponent<CharacterGrounding>();
-        
     }
 
     private void Update()
     {
-        if(Input.GetButtonDown("Fire1") && characterGrounding.IsGrounded)
+        if(Input.GetKeyDown(KeyCode.Space) && characterGrounding.IsGrounded)
         {
             rb2d.AddForce(Vector2.up * jumpPower);
         }
-    }
 
-
-    void FixedUpdate()
-    {
         float horizontal = Input.GetAxis("Horizontal");
         Speed = horizontal;//this is for the animation
 
         Vector3 movement = new Vector3(horizontal, 0);
 
-        transform.position += movement* moveSpeed * Time.deltaTime;
-
-        
+        transform.position += movement* moveSpeed * Time.deltaTime;       
     }
 }
