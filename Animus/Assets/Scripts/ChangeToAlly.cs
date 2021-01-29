@@ -6,18 +6,15 @@ public class ChangeToAlly : MonoBehaviour,IHitable
 {
     Enemy enemy;
     Bouncy bouncy;
-    SpriteRenderer sr;
     Rigidbody2D rb2d;
-    [SerializeField]
-    Sprite evilSprite;
-    [SerializeField]
-    Sprite goodSprite;
+    Animator animator;
     [SerializeField]
     float timeChanged = 10f;
     bool goodGuy = false;
     private void Awake()
     {
-        sr = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        animator.SetBool("Evil", true);
         rb2d = GetComponent<Rigidbody2D>();
         enemy = GetComponent<Enemy>();
         bouncy = GetComponent<Bouncy>();
@@ -33,7 +30,7 @@ public class ChangeToAlly : MonoBehaviour,IHitable
             enemy.enabled = false;
             Destroy(GetComponent<KillOnTouch>());
             bouncy.enabled = true;
-            sr.sprite = goodSprite;
+            animator.SetBool("Evil", false);
             goodGuy = true;
             StartCoroutine(RevertBackAfterSeconds());
         }
@@ -46,7 +43,7 @@ public class ChangeToAlly : MonoBehaviour,IHitable
         enemy.enabled = true;
         gameObject.AddComponent(typeof(KillOnTouch));
         bouncy.enabled = false;
-        sr.sprite = evilSprite;
+        animator.SetBool("Evil", true);
         goodGuy = false;
     }
 }
