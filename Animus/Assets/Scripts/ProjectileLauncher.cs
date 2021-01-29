@@ -10,8 +10,8 @@ public class ProjectileLauncher : MonoBehaviour
     [SerializeField] Transform spawnTransform;
     IMove mover;
     private float nextFireTime;
-    float horizontal = 1f;
-
+    float horizontal = -1f;
+    public bool enlightened = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +21,10 @@ public class ProjectileLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!enlightened)
+        {
+            return;
+        }
         if (mover.Speed != 0)
         {
             horizontal = mover.Speed;

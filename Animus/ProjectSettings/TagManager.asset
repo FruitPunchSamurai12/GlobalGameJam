@@ -13,9 +13,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Background
-  - Middleground
-  - Foreground
+  - Ground
+  - Projectile
+  - Player
   - 
   - 
   - 
