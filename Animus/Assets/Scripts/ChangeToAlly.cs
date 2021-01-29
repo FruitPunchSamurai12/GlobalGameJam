@@ -18,7 +18,7 @@ public class ChangeToAlly : MonoBehaviour,IHitable
         rb2d = GetComponent<Rigidbody2D>();
         enemy = GetComponent<Enemy>();
         bouncy = GetComponent<Bouncy>();
-        bouncy.enabled = false;
+        bouncy.activated = false;
 
     }
 
@@ -29,7 +29,7 @@ public class ChangeToAlly : MonoBehaviour,IHitable
             rb2d.constraints = RigidbodyConstraints2D.FreezeAll;
             enemy.enabled = false;
             Destroy(GetComponent<KillOnTouch>());
-            bouncy.enabled = true;
+            bouncy.activated = true;
             animator.SetBool("Evil", false);
             goodGuy = true;
             StartCoroutine(RevertBackAfterSeconds());
@@ -42,7 +42,7 @@ public class ChangeToAlly : MonoBehaviour,IHitable
         rb2d.constraints = RigidbodyConstraints2D.FreezeRotation;
         enemy.enabled = true;
         gameObject.AddComponent(typeof(KillOnTouch));
-        bouncy.enabled = false;
+        bouncy.activated = false;
         animator.SetBool("Evil", true);
         goodGuy = false;
     }

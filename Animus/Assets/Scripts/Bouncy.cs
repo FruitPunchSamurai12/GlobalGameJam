@@ -5,8 +5,11 @@ using UnityEngine;
 public class Bouncy : MonoBehaviour
 {
     [SerializeField] float bounceVelocity = 10f;
+    public bool activated = false;
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!activated)
+            return;
         if(collision.collider.CompareTag("Player"))
         {
             var rb2d = collision.collider.GetComponent<Rigidbody2D>();
