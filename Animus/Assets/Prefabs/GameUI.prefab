@@ -398,7 +398,6 @@ GameObject:
   - component: {fileID: 4255713908711918718}
   - component: {fileID: 4255713908711918717}
   - component: {fileID: 4255713908711918716}
-  - component: {fileID: 4255713908711918719}
   m_Layer: 5
   m_Name: MemoryFrag_Img
   m_TagString: Untagged
@@ -463,25 +462,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &4255713908711918719
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4255713908711918713}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bca24d1993bcd1148b0d43b97cbdb125, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4255713909114354717
 GameObject:
   m_ObjectHideFlags: 0
