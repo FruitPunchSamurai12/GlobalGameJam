@@ -12,6 +12,7 @@ public class MemoryFragment : MonoBehaviour
         if(projectileLauncher!=null)
         {
             projectileLauncher.enlightened = true;
+            GameManager.Instance.GotMemoryFragment();
             Destroy(gameObject);
         }
     }

@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int Lives { get; private set; }
+    public int MemoryFragments { get; private set; }
 
     public static GameManager Instance;
 
     public event Action<int> OnLivesChanged;
+    public event Action<int> OnMemoryFragmentsChanged;
 
     private void Awake()
     {
@@ -55,5 +57,11 @@ public class GameManager : MonoBehaviour
     {
         Lives = 3;
         SceneManager.LoadScene(0);
+    }
+
+    public void GotMemoryFragment()
+    {
+        MemoryFragments++;
+        OnMemoryFragmentsChanged?.Invoke(MemoryFragments);
     }
 }
