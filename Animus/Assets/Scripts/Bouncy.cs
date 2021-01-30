@@ -12,7 +12,6 @@ public class Bouncy : MonoBehaviour
             return;
         if(collision.collider.CompareTag("Player"))
         {
-            AudioManager.Instance.PlaySoundEffect("Jump");
             var rb2d = collision.collider.GetComponent<Rigidbody2D>();
             if (rb2d != null)
             {
