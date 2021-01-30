@@ -6,6 +6,8 @@ using UnityEngine;
 public class CharacterAnimation : MonoBehaviour
 {
     [SerializeField] float respawnTime = 1f;
+    [SerializeField] RuntimeAnimatorController dark;
+    [SerializeField] RuntimeAnimatorController red;
     Animator animator;
     private IMove mover;
     CharacterGrounding characterGrounding;
@@ -65,5 +67,10 @@ public class CharacterAnimation : MonoBehaviour
     public void PlayStep()
     {
         AudioManager.Instance.PlaySoundEffect("Step");
+    }
+
+    public void ChangeController()
+    {
+        animator.runtimeAnimatorController = red;
     }
 }

@@ -33,4 +33,5 @@ public class MovingPlatform : MonoBehaviour
             direction = 1;
         }
     }
+
 }

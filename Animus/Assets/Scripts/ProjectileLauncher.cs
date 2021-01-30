@@ -11,11 +11,17 @@ public class ProjectileLauncher : MonoBehaviour
     IMove mover;
     private float nextFireTime;
     float horizontal = -1f;
-    public bool enlightened = false;
+    bool enlightened = false;
     // Start is called before the first frame update
     void Start()
     {
         mover = GetComponent<IMove>();
+    }
+
+    public void Enlight()
+    {
+        enlightened = true;
+        GetComponent<CharacterAnimation>().ChangeController();
     }
 
     // Update is called once per frame

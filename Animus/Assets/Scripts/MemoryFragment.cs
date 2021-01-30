@@ -11,7 +11,7 @@ public class MemoryFragment : MonoBehaviour
         var projectileLauncher = collision.GetComponent<ProjectileLauncher>();
         if(projectileLauncher!=null)
         {
-            projectileLauncher.enlightened = true;
+            projectileLauncher.Enlight();
             GameManager.Instance.GotMemoryFragment();
             AudioManager.Instance.PlaySoundEffect("Collect");
             Destroy(gameObject);
