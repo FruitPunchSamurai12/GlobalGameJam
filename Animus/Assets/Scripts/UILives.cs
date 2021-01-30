@@ -12,10 +12,8 @@ public class UILives : MonoBehaviour
     {
         GameManager.Instance.OnLivesChanged += HandleOnLivesChanged;
         for (int i = 0; i < soulImages.Length; i++)
-        {
-            
-             soulImages[i].enabled = true;
-            
+        {           
+             soulImages[i].enabled = true;           
         }
     }
 
@@ -28,5 +26,10 @@ public class UILives : MonoBehaviour
                 soulImages[i].enabled = false;
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnLivesChanged -= HandleOnLivesChanged;
     }
 }

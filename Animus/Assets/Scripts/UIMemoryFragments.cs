@@ -18,4 +18,9 @@ public class UIMemoryFragments : MonoBehaviour
     {
         text.SetText($"x {memoryFragments}/6");
     }
+
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnMemoryFragmentsChanged -= HandleMemoryFragmentsChanged;
+    }
 }
