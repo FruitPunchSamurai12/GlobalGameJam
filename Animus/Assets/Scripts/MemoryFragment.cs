@@ -13,7 +13,6 @@ public class MemoryFragment : MonoBehaviour
         {
             projectileLauncher.enlightened = true;
             GameManager.Instance.GotMemoryFragment();
-            AudioManager.Instance.PlaySoundEffect("Collect");
             Destroy(gameObject);
         }
     }
