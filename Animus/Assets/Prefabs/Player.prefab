@@ -297,7 +297,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62610f80c0a820246bb276031625d259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 0.5
+  respawnTime: 1
+  dark: {fileID: 9100000, guid: 1cb94f1328038664ab4752d1c0812fa2, type: 2}
+  red: {fileID: 22100000, guid: 56cb912e4e1a1e1449746dd0d1315a3f, type: 2}
 --- !u!70 &3763148858648201559
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -329,4 +331,3 @@ MonoBehaviour:
   fireRate: 0.25
   projectilePrefab: {fileID: 6401401180192184581, guid: fde2459185a16e5479008ede40d1f0e5, type: 3}
   spawnTransform: {fileID: 1305704759}
-  enlightened: 0
