@@ -7,10 +7,19 @@ public class KillOnTouch : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var playerMovementController = collision.collider.GetComponent<PlayerMovementController>();
-        if(playerMovementController!=null)
+        var playerAnimation = collision.collider.GetComponent<CharacterAnimation>();
+        if (playerAnimation != null)
         {
-            GameManager.Instance.KillPlayer();
+            playerAnimation.Death();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var playerAnimation = collision.GetComponent<CharacterAnimation>();
+        if (playerAnimation != null)
+        {
+            playerAnimation.Death();
         }
     }
 }

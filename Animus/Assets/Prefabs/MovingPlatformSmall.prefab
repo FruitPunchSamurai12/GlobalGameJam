@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 847285071791407634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 847285072186695945}
   - component: {fileID: 847285072186695946}
   - component: {fileID: 847285072186695988}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MovingPlatfrom1_UpDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 847285072292879706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: End
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 847285073407474919}
   - component: {fileID: 847285073407474912}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MovingPlatformSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

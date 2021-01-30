@@ -28,6 +28,7 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            PlayBGMusic("TitleLoop");
             DontDestroyOnLoad(gameObject);
         }
         else
