@@ -21,6 +21,7 @@ public class PlayerMovementController : MonoBehaviour,IMove
     {
         if(Input.GetKeyDown(KeyCode.Space) && characterGrounding.IsGrounded)
         {
+            AudioManager.Instance.PlaySoundEffect("Jump");
             rb2d.AddForce(Vector2.up * jumpPower);
         }
 
