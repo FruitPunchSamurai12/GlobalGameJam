@@ -31,7 +31,7 @@ public class ProjectileLauncher : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1") && Time.time >= nextFireTime)
         {
-
+            AudioManager.Instance.PlaySoundEffect("Attack");
             Projectile projectile = Instantiate(projectilePrefab, spawnTransform.position, Quaternion.identity);
             projectile.Direction = horizontal > 0 ? 1 : -1;
             nextFireTime = Time.time + fireRate;

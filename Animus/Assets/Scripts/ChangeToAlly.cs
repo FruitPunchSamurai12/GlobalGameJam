@@ -32,6 +32,7 @@ public class ChangeToAlly : MonoBehaviour,IHitable
             bouncy.activated = true;
             animator.SetBool("Evil", false);
             goodGuy = true;
+            AudioManager.Instance.PlaySoundEffect("Enemy");
             StartCoroutine(RevertBackAfterSeconds());
         }
     }
