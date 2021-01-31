@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Portal : MonoBehaviour
 {
+    [SerializeField] string bgMusic;
     [SerializeField] string sceneName;
     [SerializeField] float delayTime = 1f;
+
+    private void Start()
+    {
+        AudioManager.Instance.PlayBGMusic(bgMusic);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +20,7 @@ public class Portal : MonoBehaviour
         {
             return;
         }
-
+        AudioManager.Instance.PlaySoundEffect("Portal");
 
         StartCoroutine(LoadAfterDelay());
 

@@ -28,7 +28,6 @@ public class AudioManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            PlayBGMusic("TitleLoop");
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -128,16 +127,17 @@ public class AudioManager : MonoBehaviour
         fxSource.Play();
     }
 
-    public float SFXSoundValue()
+    public void ChangeSFXVolume(float volume)
     {
-        if (sfxON)
+        foreach (var source in fxSources)
         {
-            return 1f;
+            source.volume = volume;
         }
-        else
-        {
-            return 0f;
-        }
+    }
+
+    public void ChangeBGVolume(float volume)
+    {
+        bgSource.volume = volume;
     }
 
     //this returns the audio clip of a sound effect for other objects to play

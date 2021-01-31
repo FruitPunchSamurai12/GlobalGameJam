@@ -11,6 +11,7 @@ public class Checkpoint : MonoBehaviour
         var player = collision.GetComponent<PlayerMovementController>();
         if(player!= null)
         {
+            AudioManager.Instance.PlaySoundEffect("Checkpoint");
             Passed = true;
         }
     }

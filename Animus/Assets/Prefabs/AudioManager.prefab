@@ -47,7 +47,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97265c7e2b8d22e478f7e192dcb92756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgMusic: []
+  bgMusic:
+  - name: Title
+    clip: {fileID: 8300000, guid: 694c9ed701a62b744b38597e05a20467, type: 3}
+  - name: Level1
+    clip: {fileID: 8300000, guid: 196d6e7d45f115841b3a2476e1f302a1, type: 3}
+  - name: Level2
+    clip: {fileID: 8300000, guid: ee1c4692ba3202c4589b6e6cd6819407, type: 3}
+  - name: Level3
+    clip: {fileID: 8300000, guid: c47ecc2a73c89b54bbdb7eebeb1fbb41, type: 3}
+  - name: Level4
+    clip: {fileID: 8300000, guid: 718c46c20561f5d458574369732a997e, type: 3}
+  - name: Level5
+    clip: {fileID: 8300000, guid: 1b77ec78bc4e9724899f615911474986, type: 3}
+  - name: Level6
+    clip: {fileID: 8300000, guid: acfafb2ff319fea4aa1bd2f8eb60b51b, type: 3}
   soundEffects:
   - name: Enemy
     clip: {fileID: 8300000, guid: 9231e916498652d49abc7c38bb2a2893, type: 3}
@@ -67,6 +81,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0d91eb2e21b2ffa42bcf7b04f5bb6c28, type: 3}
   - name: Step
     clip: {fileID: 8300000, guid: 8e4ebe6c709d3a644847fed1335965d7, type: 3}
+  - name: Checkpoint
+    clip: {fileID: 8300000, guid: e6b2c1401b790ea4a997476635b1931c, type: 3}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 1639b8f8b6aaf5941a5de83915570163, type: 3}
   bgSource: {fileID: 3293289442644999246}
   fxSources:
   - {fileID: 4907461254606034302}

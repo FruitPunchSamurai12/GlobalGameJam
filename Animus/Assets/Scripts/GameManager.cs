@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public event Action<int> OnLivesChanged;
     public event Action<int> OnMemoryFragmentsChanged;
+    public event Action OnGameOver;
 
     private void Awake()
     {
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
         OnLivesChanged?.Invoke(Lives);
         if (Lives <= 0)
         {
-            RestartGame();
+            OnGameOver?.Invoke();
         }
         else
         {
@@ -53,9 +54,10 @@ public class GameManager : MonoBehaviour
 
 
 
-    private void RestartGame()
+    public void RestartGame()
     {
         Lives = 3;
+        MemoryFragments = 0;
         SceneManager.LoadScene(0);
     }
 

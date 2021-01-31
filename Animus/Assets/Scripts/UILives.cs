@@ -12,8 +12,11 @@ public class UILives : MonoBehaviour
     {
         GameManager.Instance.OnLivesChanged += HandleOnLivesChanged;
         for (int i = 0; i < soulImages.Length; i++)
-        {           
-             soulImages[i].enabled = true;           
+        {
+            if (GameManager.Instance.Lives <= i)
+            {
+                soulImages[i].enabled = false;
+            }
         }
     }
 
