@@ -1451,8 +1451,12 @@ PrefabInstance:
       value: Level6
       objectReference: {fileID: 0}
     - target: {fileID: 7574192562400754187, guid: d0e03ff6a216f5a40ad5b8981571dcec, type: 3}
+      propertyPath: voiceSFX
+      value: Run
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574192562400754187, guid: d0e03ff6a216f5a40ad5b8981571dcec, type: 3}
       propertyPath: sceneName
-      value: Level1
+      value: Credits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0e03ff6a216f5a40ad5b8981571dcec, type: 3}

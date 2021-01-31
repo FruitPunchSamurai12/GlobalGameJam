@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         player.transform.position = checkpoint.transform.position;
     }
 
+    public void RefillLives() => Lives = 3;
 
 
     public void RestartGame()
@@ -67,3 +68,4 @@ public class GameManager : MonoBehaviour
         OnMemoryFragmentsChanged?.Invoke(MemoryFragments);
     }
 }
+

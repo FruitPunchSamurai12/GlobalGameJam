@@ -96,6 +96,11 @@ public class AudioManager : MonoBehaviour
         bgSource.Play();
     }
 
+    public void StopBGMusic()
+    {
+        bgSource.Stop();
+    }
+
     //this finds and plays a sound effect using the audio manager audio source. got a delay option as well
     public void PlaySoundEffect(string name, float delay = 0f)
     {
@@ -120,6 +125,24 @@ public class AudioManager : MonoBehaviour
             }
         }
        
+    }
+
+    public void PlaySoundEffectInSpecificSource(string name, int sourceIndex)
+    {
+        Sound s = new Sound();
+        foreach (Sound sound in soundEffects)
+        {
+            if (sound.name == name)
+            {
+                s = sound;
+                break;
+            }
+        }
+        if(sourceIndex<fxSources.Length)
+        {
+            fxSources[sourceIndex].clip = s.clip;
+            fxSources[sourceIndex].Play();
+        }
     }
 
     void FXSourcePlay()
